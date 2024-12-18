@@ -41,3 +41,8 @@ window.addEventListener("scroll", function () {
 
   lastScrollTop = scrollTop;
 });
+
+
+window.onload = function(){
+  document.getElementById("video").play()
+}
