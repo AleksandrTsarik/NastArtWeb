@@ -1,0 +1,109 @@
+.preview {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    background-color: #000;
+    opacity: 1;
+    animation-name: anim-bg;
+    animation-duration: 5s;
+    opacity: 0;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+  &__footer-pic {
+    video {
+      animation-name: video;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-delay: 7s;
+    }
+  }
+}
+.preview-body {
+  &__title {
+    span {
+      &:nth-child(1) {
+        animation-name: anim-text1;
+        transform: translateY(0);
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+      }
+      &:nth-child(2) {
+        animation-name: anim-text2;
+        transform: translateY(0);
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+      }
+      &:nth-child(3) {
+        animation-name: anim-text3;
+        transform: translateY(0);
+        animation-duration: 2s;
+        animation-timing-function: linear;
+      }
+    }
+  }
+  &__item {
+    animation-name: anim-text4;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+  }
+}
+@keyframes anim-bg {
+  from {
+    opacity: 1;
+    z-index: 5;
+  }
+
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes anim-text1 {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes anim-text2 {
+  from {
+    transform: translateY(-250px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes anim-text3 {
+  from {
+    transform: translateY(150px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes anim-text4 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes video {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
