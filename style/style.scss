@@ -23,6 +23,9 @@ body {
 .preview {
   position: relative;
   height: 105vh;
+  @media (max-width: 767px) {
+    height: auto;
+  }
   &__video {
     video {
       width: 100%;
